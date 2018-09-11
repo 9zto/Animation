@@ -1,6 +1,8 @@
 import javax.swing.*;
 import java.awt.*;
 
+//NOTE FROM JACOB: COMMENT YOUR CODE pls
+
 final public class Animate {
 
     JFrame frame;
@@ -108,7 +110,7 @@ final public class Animate {
         }
     }
     
-    private Color fadeColor(int x, Color currentColor) {
+    private Color fadeColor(int x, Color currentColor) {//FADES COLOR BY SWITCHING STUFF
     	if (oneX > .9 * frameWidth) {
            	return new Color(20, 20, 20);
         } else if (oneX > .85 * frameWidth) {
@@ -120,7 +122,7 @@ final public class Animate {
         	return new Color(38, 35, 81);
         } else if (oneX > .7 * frameWidth) {
         	System.out.println(oneX);
-        	double numOfTicks = (.8 * frameWidth - .7*frameWidth);
+        	double numOfTicks = (.8 * frameWidth - .7*frameWidth);//THIS STUFF IS BORKEN
         	double rChange = ((196-37)/numOfTicks);
         	double gChange = ((31-196)/numOfTicks);
         	double bChange = ((75-196)/numOfTicks);
@@ -134,7 +136,7 @@ final public class Animate {
         }
     }
 
-    private void moveDot() {
+    private void moveDot() {//MOVE THE STUFF
         while(true){
             //checkBounds();
         	if(day) {
@@ -148,7 +150,7 @@ final public class Animate {
             frame.repaint();
         }
     }
-    private void moveLoc(){
+    private void moveLoc(){//MOVE THE SUN
     	//while(day) {
     	if(oneX > frameWidth){
             oneX = -100;
@@ -163,7 +165,7 @@ final public class Animate {
     	//}
     }
     
-    private void moveMoon(){
+    private void moveMoon(){//MOVE THE MOON
     	//while(!day) {
     	if(twoX > frameWidth){
             twoX = -100;
